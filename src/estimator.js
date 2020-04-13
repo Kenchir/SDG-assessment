@@ -1,4 +1,4 @@
-const normalisedTime = (periodType, timeToElapse) => {
+const normalisedTime = (timeToElapse, periodType) => {
   let days = '';
   if (periodType === 'days') days = timeToElapse;
   else if (periodType === 'weeks') days = timeToElapse * 7;
