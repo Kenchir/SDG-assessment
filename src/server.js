@@ -25,7 +25,12 @@ app.use(require('morgan')('dev'));
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: false }));
-app.use(xmlparser());
+app.use(xmlparser({
+  explicitArray: false,
+  normalize: false,
+  normalizeTags: false,
+  trim: true
+}));
 app.use(require('./routes'));
 
 // app.get("/",(req,res)=>{res.send('Hi sir')});

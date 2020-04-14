@@ -6,11 +6,22 @@ const estimator = require('../../estimator');
 // import estimator from '../../estimator'
 router.post('/on-covid-19', (req, res) => {
   const { data } = req.body;
+  console.log(req.body);
   const output = estimator(data);
   return res.status(200).json({ output });
 });
+router.post('/on-covid-19/xml-p', async (req, res) => {
+  const { root } = req.body;
+  // console.log(req.body)
+  let output = estimator(root);
+  // output = JSON.stringify(output);
+  output = await js2xmlparser.parse('root', output);
+  //  console.log(output)
+  return res.set('Content-Type', 'text/xml').status(200).send(output);
+});
 router.post('/on-covid-19/xml', async (req, res) => {
   const { root } = req.body;
+  // console.log(req.body)
   const data = root.data[0];
   const newData = {
     region: {
