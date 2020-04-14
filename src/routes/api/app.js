@@ -7,14 +7,70 @@ const estimator = require('../../estimator');
 // const xml = require('xml')
 // import estimator from '../../estimator'
 router.post('/on-covid-19', (req, res) => {
-  const { data } = req.body;
-  // console.log(req.body);
+  const {
+    region,
+    periodType,
+    timeToElapse,
+    reportedCases,
+    population,
+    totalHospitalBeds
+  } = req.body;
+
+  const {
+    name,
+    avgAge,
+    avgDailyIncomeInUSD,
+    avgDailyIncomePopulation
+  } = region;
+
+  const data = {
+    region: {
+      name,
+      avgAge,
+      avgDailyIncomeInUSD,
+      avgDailyIncomePopulation
+    },
+    periodType,
+    timeToElapse,
+    reportedCases,
+    population,
+    totalHospitalBeds
+  };
+    // console.log(req.body);
   const output = estimator(data);
   return res.status(200).json({ output });
 });
 router.post('/on-covid-19/json', (req, res) => {
-  const { data } = req.body;
-  // console.log(data);
+  const {
+    region,
+    periodType,
+    timeToElapse,
+    reportedCases,
+    population,
+    totalHospitalBeds
+  } = req.body;
+
+  const {
+    name,
+    avgAge,
+    avgDailyIncomeInUSD,
+    avgDailyIncomePopulation
+  } = region;
+
+  const data = {
+    region: {
+      name,
+      avgAge,
+      avgDailyIncomeInUSD,
+      avgDailyIncomePopulation
+    },
+    periodType,
+    timeToElapse,
+    reportedCases,
+    population,
+    totalHospitalBeds
+  };
+    // console.log(data);
   const output = estimator(data);
   return res.status(200).json({ output });
 });

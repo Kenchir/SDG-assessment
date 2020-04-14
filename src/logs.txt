@@ -16,3 +16,16 @@ GET / 404 1166 - 3.916 ms
 GET //api/v1/on-covid-19/logs 404 1166 - 0.675 ms
 GET /api/v1/on-covid-19/logs 200 694 - 2.205 ms
 GET /favicon.ico 404 1166 - 0.583 ms
+POST //api/v1/on-covid-19 404 1166 - 10.724 ms
+POST //api/v1/on-covid-19 404 1166 - 0.688 ms
+POST //api/v1/on-covid-19 404 1166 - 0.635 ms
+POST //api/v1/on-covid-19/json 404 1166 - 1.751 ms
+POST //api/v1/on-covid-19/xml 404 1166 - 1.113 ms
+GET //api/v1/on-covid-19/logs 404 1166 - 0.561 ms
+POST /api/v1/on-covid-19 500 1285 - 1.516 ms
+POST /api/v1/on-covid-19 500 1285 - 1.040 ms
+POST /api/v1/on-covid-19 500 1285 - 1.227 ms
+POST /api/v1/on-covid-19/json 500 1285 - 1.280 ms
+GET /api/v1/on-covid-19/logs 200 1254 - 0.511 ms
+POST /api/v1/on-covid-19 500 1285 - 1.079 ms
+POST /api/v1/on-covid-19/xml - - - - ms
