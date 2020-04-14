@@ -3,3 +3,16 @@ POST /api/v1/on-covid-19/json 500 1285 - 6.126 ms
 POST /api/v1/on-covid-19/json 500 1285 - 1.456 ms
 POST /api/v1/on-covid-19/json 500 1285 - 6.993 ms
 POST /api/v1/on-covid-19/json 200 774 - 17.688 ms
+GET / 404 1166 - 3.733 ms
+GET / 404 1166 - 0.735 ms
+POST /api/v1/on-covid-19/logs 404 957 - 11.255 ms
+POST /api/v1/on-covid-19/logs 404 957 - 0.770 ms
+POST /api/v1/on-covid-19 200 774 - 3.282 ms
+POST /api/v1/on-covid-19/logs 404 957 - 1.051 ms
+GET //api/v1/on-covid-19/logs 404 1166 - 0.797 ms
+GET //api/v1/on-covid-19/logs 404 1166 - 0.512 ms
+GET /api/v1/on-covid-19/logs 200 570 - 1.164 ms
+GET / 404 1166 - 3.916 ms
+GET //api/v1/on-covid-19/logs 404 1166 - 0.675 ms
+GET /api/v1/on-covid-19/logs 200 694 - 2.205 ms
+GET /favicon.ico 404 1166 - 0.583 ms
